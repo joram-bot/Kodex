@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KODEX AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to KODEX</h1>
+        <form method="POST" action="/ask">
+            <input type="text" name="user_input" placeholder="Say something to KODEX" required>
+            <input type="text" name="feedback" placeholder="Any feedback? (optional)">
+            <button type="submit">Ask</button>
+        </form>
+        {% if response %}
+            <div class="response">
+                <h2>KODEX says:</h2>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
